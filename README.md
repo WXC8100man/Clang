@@ -1,33 +1,33 @@
 # Clang MediaWiki Extension
 
-Ekstensi MediaWiki untuk menambahkan tag kustom `<clang>` guna menangani bahasa pemrograman C / kode Clang.
+A MediaWiki extension to add a custom `<clang>` tag for handling C programming language / Clang code.
 
-## Fitur
-* Menambahkan parser tag `<clang>...</clang>`.
-* Mendukung instalasi modern via `extension.json` (Kompatibel dengan MediaWiki >= 1.39).
+## Features
+* Adds the `<clang>...</clang>` parser tag.
+* Supports modern installation via `extension.json` (Compatible with MediaWiki >= 1.39).
 
-## Cara Instalasi via GitHub
+## How to Install via GitHub
 
-Untuk menghindari error *missing file / no such directory*, pastikan Anda mengklon ekstensi ini ke dalam direktori yang benar dengan nama direktori yang tepat (`Clang`).
+To avoid *missing file / no such directory* errors, make sure you clone this extension into the correct directory with the exact directory name (`Clang`).
 
-1. Buka terminal dan masuk ke direktori instalasi MediaWiki Anda:
+1. Open your terminal and navigate to your MediaWiki installation directory:
    ```bash
-   cd /jalur/ke/mediawiki/extensions
+   cd /path/to/mediawiki/extensions
    ```
 
-2. Klon repositori GitHub ini langsung ke dalam folder bernama `Clang`:
+2. Clone this GitHub repository directly into a folder named `Clang`:
    ```bash
    git clone https://github.com/yourusername/mediawiki-extension-Clang.git Clang
    ```
-   *Penting:* Jika direktori tujuan tidak dinamai `Clang` (sensitif huruf kapital), MediaWiki akan mengalami error fatal karena kegagalan autoloader mencari file `src/Hooks.php`.
+   *Important:* If the destination directory is not named `Clang` (case-sensitive), MediaWiki will encounter a fatal error because the autoloader will fail to locate the `src/Hooks.php` file.
 
-3. Tambahkan baris berikut di bagian paling bawah file `LocalSettings.php` MediaWiki Anda:
+3. Add the following line to the very bottom of your MediaWiki `LocalSettings.php` file:
    ```php
    wfLoadExtension( 'Clang' );
    ```
 
-## Penggunaan di Wiki
-Tulis kode program C Anda di dalam tag berikut pada halaman wiki:
+## Wiki Usage
+Write your C program code inside the following tags on your wiki page:
 ```html
 <clang>
 #include <stdio.h>

@@ -1,0 +1,8 @@
+{
+    "@metadata": {
+        "authors": [
+            "Vcrelt373246"
+        ]
+    },
+    "clang-desc": "A MediaWiki extension to add a custom <clang> tag for handling C programming language / Clang code."
+}

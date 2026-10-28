@@ -1,0 +1,27 @@
+{
+    "name": "Clang",
+    "version": "1.0.0",
+    "author": "AI Collaborator",
+    "url": "https://github.com/yourusername/mediawiki-extension-Clang",
+    "descriptionmsg": "clang-desc",
+    "license-name": "MIT",
+    "type": "parserhook",
+    "requires": {
+        "MediaWiki": ">=1.39.0"
+    },
+    "MessagesDirs": {
+        "Clang": [
+            "i18n"
+        ]
+    },
+    "ExtensionMessagesFiles": {
+        "ClangMagic": "Clang.magic.php"
+    },
+    "AutoloadClasses": {
+        "MediaWiki\\Extension\\Clang\\Hooks": "src/Hooks.php"
+    },
+    "Hooks": {
+        "ParserFirstCallInit": "MediaWiki\\Extension\\Clang\\Hooks::onParserFirstCallInit"
+    },
+    "manifest_version": 2
+}

@@ -17,7 +17,8 @@ To avoid *missing file / no such directory* errors, make sure you clone this ext
 
 2. Clone this GitHub repository directly into a folder named `Clang`:
    ```bash
-   git clone https://github.com/yourusername/mediawiki-extension-Clang.git Clang
+   git clone https://github.com
+WXC8100man/Clang.git Clang
    ```
    *Important:* If the destination directory is not named `Clang` (case-sensitive), MediaWiki will encounter a fatal error because the autoloader will fail to locate the `src/Hooks.php` file.
 

@@ -7,7 +7,7 @@ use PPFrame;
 
 class Hooks {
     /**
-     * Registrasi tag <clang> pada parser MediaWiki
+     * Register <clang> tag on MediaWiki parser
      *
      * @param Parser $parser
      */
@@ -16,17 +16,17 @@ class Hooks {
     }
 
     /**
-     * Render konten di dalam tag <clang>
+     * Render content inside <clang> tag
      *
-     * @param string $input Konten di dalam tag
-     * @param array $args Argumen tag
+     * @param string $input Content inside the tag
+     * @param array $args Tag arguments
      * @param Parser $parser
      * @param PPFrame $frame
      * @return string
      */
     public static function renderClangTag( $input, array $args, Parser $parser, PPFrame $frame ) {
-        // Sanitasi dasar atau format syntax highlighting
-        // Di sini kita hanya membungkusnya dengan tag pre dan code untuk C
+        // Basic sanitation or syntax highlighting format
+        // Here we just wrap it with pre and code tags for C
         $safeInput = htmlspecialchars( $input );
         return "<pre><code class=\"language-c\">" . $safeInput . "</code></pre>";
     }
